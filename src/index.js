@@ -22,9 +22,9 @@ exports.max = function max(array) {
 
 exports.avg = function avg(array) {
     if (array === undefined || !array.length) return 0;
-    let k = array[0];
-    for (let i = 1; i < array.length; i++) {
-        k += array[i];
+    let k = 0;
+    for (let i of array) {
+        k += i;
     }
     return k / array.length;
 };
